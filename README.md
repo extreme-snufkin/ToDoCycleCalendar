@@ -1,4 +1,4 @@
 ToDoCycleCalendar
 =================
 
-ToDoCycleCalendar repository.
+日常の雑多なタスクや突発的なタスクを管理したいSEやシステム運用担当者向けのToDoやスケジュールを管理するアプリ(Android)
