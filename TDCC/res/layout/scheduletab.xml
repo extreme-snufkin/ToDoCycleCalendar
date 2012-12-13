@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ToDoCycleCalendar
+ Copyright (C) 2012  Tohru Mashiko
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+ -->
+<RelativeLayout
+	 xmlns:android="http://schemas.android.com/apk/res/android"
+	 android:orientation="vertical"
+	 android:layout_width="match_parent"
+	 android:layout_height="match_parent"
+	 android:background="@color/mizuiro"
+	 android:id="@+id/scheduletab"
+>
+	<LinearLayout
+		 android:id="@+id/ll1"
+		 android:orientation="horizontal"
+		 android:layout_width="match_parent"
+		 android:layout_height="wrap_content"
+		 android:gravity="center"
+		 android:layout_alignParentBottom="true"
+		 android:background="@color/mizuiro"
+	>
+		<Button
+			 android:id="@+id/newaddbutton"
+			 android:layout_width="0dip"
+			 android:layout_weight="1"
+			 android:text="@string/newadd_btn"
+			 android:onClick="newAdd"
+			 android:visibility="visible"
+			 android:layout_height="wrap_content"
+			 android:layout_gravity="center_vertical|center_horizontal"
+			 />
+		<Button
+			 android:id="@+id/alarmbutton"
+			 android:layout_width="0dip"
+			 android:layout_weight="1"
+			 android:text="@string/alarm_btn"
+			 android:onClick="alarmSetting"
+			 android:visibility="gone"
+			 android:layout_height="wrap_content"
+			 android:layout_gravity="center_vertical|center_horizontal"
+			 />
+	</LinearLayout>
+	<ViewFlipper
+		 android:layout_width="match_parent"
+		 android:layout_height="match_parent"
+		 android:layout_above="@id/ll1"
+		 android:id="@+id/vfList" >
+		<ListView
+			 android:id="@+id/schedulelist"
+			 android:layout_width="match_parent"
+			 android:layout_height="match_parent"
+			 android:fastScrollEnabled="true"
+			 android:scrollingCache="false"
+			 android:focusable="false"
+			 android:focusableInTouchMode="false"
+			 android:background="@color/mizuiro"
+		 />
+	</ViewFlipper>
+</RelativeLayout>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ToDoCycleCalendar
+ Copyright (C) 2012  Tohru Mashiko
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+ -->
+<resources>
+	<!-- Message Setting Infomation -->
+	<!-- Application Name -->
+	<string name="app_name">ToDoCycleCalendar</string>
+
+	<!-- Button Name(Common) -->
+	<string name="yes_btn">はい</string>
+	<string name="no_btn">いいえ</string>
+	<string name="newadd_btn">新規追加</string>
+	<string name="alarm_btn">アラーム設定</string>
+	<string name="carryover_btn">繰越</string>
+	<string name="save_btn">保存</string>
+	<string name="cancel_btn">キャンセル</string>
+	<string name="search_btn">　検 索　</string>
+	<string name="agcal_btn">集計</string>
+	<string name="copy_btn">コピー</string>
+	<string name="load_btn">読込</string>
+	<string name="exec_btn">実行</string>
+	<string name="close_btn">閉じる</string>
+	<string name="mic_btn">マイク</string>
+
+	<!-- Message(Common) -->
+	<string name="mes1_dialog">アプリケーション終了</string>
+	<string name="mes2_dialog">アプリケーションを終了します。\nよろしいですか？</string>
+	<string name="mes3_dialog">音声入力</string>
+	
+	<!-- Menu Name(Common) -->
+	<string name="search_menu">検索</string>
+	<string name="sync_menu">同期</string>
+	<string name="ac_menu">集計</string>
+	<string name="sc_menu">サブカテゴリ編集</string>
+	<string name="br_menu">バックアップ/リストア</string>
+	<string name="about_menu">About</string>
+	<string name="end_menu">終了</string>
+	<string name="share_menu">共有</string>
+
+	<!-- Internal Error Code(Common) -->
+
+	<!-- Error Code(Common) -->
+	<string name="sqlite_read_err">データベースの読み込み時にエラーが発生しました</string>
+	<string name="sqlite_write_err">データベースの更新処理時にエラーが発生しました</string>
+	<string name="storage_status_err">SDカードが使用可能な状態にありません</string>
+	<string name="storage_disksize_err">SDカードの空き容量が不足しています</string>
+	<string name="voice_entry_err">音声入力時にエラーが発生しました</string>
+	<string name="network_if_err">ネットワークが有効になっていない為、処理を中止しました</string>
+
+	<!-- User Interface Name(Activity) -->
+	<string name="act_name1">ToDoCycleCalendar</string>
+	<string name="act_name2">スケジュール</string>
+	<string name="act_name3">ToDo</string>
+	<string name="act_name4">スケジュール登録</string>
+	<string name="act_name5">スケジュール編集</string>
+	<string name="act_name6">ToDo登録</string>
+	<string name="act_name7">ToDo編集</string>
+	<string name="act_name8">検索</string>
+	<string name="act_name9">同期</string>
+	<string name="act_name10">集計</string>
+	<string name="act_name11">サブカテゴリ編集</string>
+	<string name="act_name12">バックアップ / リストア</string>
+	<string name="act_name13">コード登録</string>
+
+	<!-- User I/F Message(Calendar) -->
+	<string name="sunday">日</string>
+	<string name="monday">月</string>
+	<string name="tuesday">火</string>
+	<string name="wednesday">水</string>
+	<string name="thursday">木</string>
+	<string name="friday">金</string>
+	<string name="saturday">土</string>
+	<string name="nowOnSync">Googleカレンダーに同期中</string>
+	<string name="getToken">認証トークン取得中</string>
+	<string name="getToken_err">認証トークン取得時にエラーが発生しました</string>
+	<string name="gCSync_err">Googleカレンダーとの同期中にエラーが発生しました</string>
+	<string name="gCSync_Unreflected">Googleカレンダーとの同期にて反映されなかったデータの件数：</string>
+	<string name="select_calendar">年月の設定</string>
+	<string name="select_errmsg1">2000年1月1日より過去の日付を選択することはできません。</string>
+	<string name="select_errmsg2">2100年12月31日より未来の日付を選択することはできません。</string>
+	<string name="about_msg1">About</string>
+	<string name="about_msg2"> ToDoCycleCalendar\n\n Copyright &#169; 2012  Tohru Mashiko \n\n This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. \n\n This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. \n\n You should have received a copy of the GNU General Public License along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</string>
+
+	<!-- User I/F Message(MainTab) -->
+	<string name="tabshare_msg1">スケジュールとToDoの詳細</string>
+	<string name="tabshare_msg2">対象年月日：</string>
+	<string name="tabshare_msg3">\n---------------------------------------------\nスケジュール\n時間\tタイトル\t場所\t説明\n</string>
+	<string name="tabshare_msg4">---------------------------------------------\nToDo\n状態\t優先順位\t所要時間\tカテゴリ\tサブカテゴリ\tタイトル\t内容\n</string>
+	<string name="completion_text1">完了</string>
+	<string name="completion_text2">未完了</string>
+	<string name="share_size_err_msg">共有対象のデータサイズが大きい為、処理を中止します</string>
+
+	<!-- User I/F Message(ScheduleTab) -->
+	<string name="allday">終日</string>
+	<string name="karakigou">ー</string>
+	<string name="scdeletedialog_title">スケジュール削除</string>
+	<string name="scalarmset_title">アラーム設定</string>
+	<string name="scalarmset_msg1">本日分のスケジュールアラームを設定してもよろしいですか？\n※この機能は、一部の端末で正常に機能しない可能性があります。</string>
+	<string name="scalarmset_msg2">アラームセット対象のスケジュールが存在しません</string>
+	<string name="scalarmset_msg3">アラームの設定が完了しました</string>
+	<string name="scalarmset_err">アラーム設定時にエラーが発生しました</string>
+	<string name="scload_msg">スケジュールデータ読込中</string>
+
+	<!-- User I/F Message(ToDoTab) -->
+	<string name="completion">完了</string>
+	<string name="priority">優先\n順位</string>
+	<string name="timeneeded">所要\n時間</string>
+	<string name="category">カテ\nゴリ</string>
+	<string name="subcategory">サブ\nカテ\nゴリ</string>
+	<string name="title">タイトル</string>
+	<string name="totaltime1">合計所要時間：</string>
+	<string name="totaltime2">時間</string>
+	<string name="completion_mark1">✓</string>
+	<string name="completion_mark2">ー</string>
+	<string name="deletedialog_title">ToDo削除</string>
+	<string name="deletedialog_msg">削除してもよろしいですか？</string>
+	<string name="carryoverdialog_title">ToDo繰越</string>
+	<string name="carryoverdialog_msg">未完了のToDoを\n翌日のToDoに\n転記してもよろしいですか？</string>
+	<string name="carryoverstop_msg">繰越対象の未完了ToDoが存在しません。</string>
+	<string name="carryoverstop_msg2">ToDoの数が上限を超える為、転記出来ません。</string>
+
+	<!-- User I/F Message(Schedule Registration) -->
+	<string name="sctitle">タイトル：</string>
+	<string name="scstarttime">　　開始：</string>
+	<string name="scendtime">　　終了：</string>
+	<string name="scallday">　　終日：</string>
+	<string name="scplace">　　場所：</string>
+	<string name="sccontent">　　説明：</string>
+	<string name="scdamy">　　　　　</string>
+	<string name="scalarm">アラーム　\n　　対象：</string>
+	<string name="sctitlehint">タイトルを入力して下さい</string>
+	<string name="scplacehint">場所を入力して下さい</string>
+	<string name="sccontenthint">説明を入力して下さい</string>
+	<string name="scalarmhint">選択して下さい</string>
+	<string name="sctitle_msg">タイトルは1024文字以内で入力して下さい。</string>
+	<string name="scalarm_msg">アラームを選択して下さい。</string>
+	<string name="scstartdate_msg">開始年月日を選択して下さい。</string>
+	<string name="scstarttime_msg">開始時間を選択して下さい。</string>
+	<string name="scenddate_msg">終了年月日を選択して下さい。</string>
+	<string name="scendtime_msg">終了時間を選択して下さい。</string>
+	<string name="scstartdate_errmsg">開始年月日の入力形式に問題があります。</string>
+	<string name="scstarttime_errmsg">開始時間の入力形式に問題があります。</string>
+	<string name="scenddate_errmsg">終了年月日の入力形式に問題があります。</string>
+	<string name="scendtime_errmsg">終了時間の入力形式に問題があります。</string>
+	<string name="scdate_errmsg">開始時間と終了時間に不整合があります。</string>
+	<string name="scstartdate_errmsg2">2000年より前の日付を入力することはできません。(開始日)</string>
+	<string name="scstartdate_errmsg3">2100年より後の日付を入力することはできません。(開始日)</string>
+	<string name="scenddate_errmsg2">2000年より前の日付を入力することはできません。(終了日)</string>
+	<string name="scenddate_errmsg3">2100年より後の日付を入力することはできません。(終了日)</string>
+	<string name="scplace_msg">場所は1024文字以内で入力して下さい。</string>
+	<string name="sccontent_msg">説明は8192文字以内で入力して下さい。</string>
+
+	<!-- User I/F Message(ToDo Registration) -->
+	<string name="tdpriority">優先順位：</string>
+	<string name="tdtimeneeded">所要時間：</string>
+	<string name="tdcategory">カテゴリ：</string>
+	<string name="tdsubcategory">サブ\nカテゴリ：</string>
+	<string name="tdcompletion">　　完了：</string>
+	<string name="tdtitle_msg">タイトルを入力して下さい。</string>
+	<string name="tdtimeneededhint">所要時間を入力して下さい</string>
+	<string name="tdpriority_msg">優先順位を選択して下さい</string>
+	<string name="tdtimeneeded_msg1">所要時間は半角文字の\n実数(形式：00.00)で入力して下さい</string>
+	<string name="tdtimeneeded_msg2">所要時間は0.00-24.00の範囲で入力して下さい</string>
+	<string name="tdcategory_msg">カテゴリを選択して下さい</string>
+	<string name="tdsubcategory_msg">サブカテゴリを選択して下さい</string>
+	<string name="tdcontent">　　内容：</string>
+	<string name="tdcontenthint">内容を入力して下さい</string>
+	<string name="tdcontent_msg">内容は8192文字以内で入力して下さい。</string>
+	<string name="tdlimitcount_msg">ToDoの数が上限を超える為、登録出来ません。</string>
+
+	<!-- User I/F Message(Search) -->
+	<string name="sestring">　検索　　\n　文字列：</string>
+	<string name="setarget">検索対象：</string>
+	<string name="setargetperiod">対象年月：</string>
+	<string name="seresultlist">検索結果一覧</string>
+	<string name="sestringhint">文字列を入力して下さい</string>
+	<string name="sestring_msg">検索文字列を入力して下さい。</string>
+	<string name="setargetperiod_msg">対象年月を選択して下さい。</string>
+	<string name="setargetperiod_errmsg1">対象年月の入力形式に問題があります。</string>
+	<string name="searchprocess">検索実行中</string>
+
+	<!-- User I/F Message(Aggregate Calculation) -->
+	<string name="acsubcategory">サブカテゴリ名</string>
+	<string name="actotaltime">合計時間</string>
+	<string name="actopspace">　　</string>
+	<string name="acbindmark">：</string>
+	<string name="actimemark">H</string>
+	<string name="actallyingprocess">時間を集計中</string>
+	<string name="acdelimiter">\t</string>
+	<string name="acshare_msg1">カテゴリ：</string>
+	<string name="acshare_msg2">\n---------------------------------------------\n</string>
+	<string name="acshare_msg3">---------------------------------------------\n</string>
+	<string name="acshare_msg4">サブカテゴリ別の所要時間の集計</string>
+
+	<!-- User I/F Message(Subcategory Edit) -->
+	<string name="sceCode">サブカテゴリ\nコード</string>
+	<string name="sceName">サブカテゴリ名</string>
+	<string name="sceDialogTitle">サブカテゴリコード：</string>
+	<string name="sceDialogHint">サブカテゴリ名を入力して下さい</string>
+	<string name="sceName_msg">サブカテゴリ名は1024文字以内で入力して下さい。</string>
+	<string name="copydialog_title">サブカテゴリコピー</string>
+	<string name="copydialog_msg">指定月の前月データを\n指定月へ上書きコピーしても\nよろしいですか？</string>
+	
+	<!-- User I/F Message(Backup/Restore) -->
+	<string name="backuptitle">バックアップ</string>
+	<string name="backuphint">バックアップ名を入力して下さい</string>
+	<string name="backupclarification">\n　スケジュールデータとToDoデータを外部ストレージにバックアップします。\nバックアップされたデータは暗号化を行なっていない為、保管に注意して下さい。\nバックアップ先：&lt;外部ストレージ&gt;/TDCC/BACKUP 以下</string>
+	<string name="restoretitle">リストア</string>
+	<string name="restoreConfirm1">\n</string>
+	<string name="restoreConfirm2">スケジュールとToDoのデータを初期化し、バックアップ名：「 </string>
+	<string name="restoreConfirm3"> 」をリストアしてもよろしいですか。</string>
+	<string name="restoreclarification">\n　既存のバックアップデータからリストアします。\nリストア時に現在のデータが初期化される為、必要に応じて、事前にバックアップを実行して下さい。</string>
+	<string name="backup_msg1">バックアップ名を入力して下さい。</string>
+	<string name="backup_msg2">バックアップ名は半角英数字で入力して下さい。</string>
+	<string name="backup_msg3">バックアップ名は20文字以内で入力して下さい。</string>
+	<string name="backup_msg4">バックアップ対象のファイルが存在しません</string>
+	<string name="backup_msg5">バックアップが正常に終了しました</string>
+	<string name="backup_msg6">バックアップ中</string>
+	<string name="backup_exist_err">同一名称のバックアップファイルがすでに存在する為、処理を中止します</string>
+	<string name="backup_copy_err">バックアップファイルのコピー中にエラーが発生しました</string>
+	<string name="restore_msg1">リストア対象のファイルが存在しません</string>
+	<string name="restore_msg2">スケジュールデータとToDoデータの削除中にエラーが発生しました</string>
+	<string name="restore_msg3">内部ストレージの空き容量が不足しています</string>
+	<string name="restore_msg4">リストアが正常に終了しました</string>
+	<string name="restore_msg5">リストア中</string>
+	<string name="restore_exist_err">リストアファイルが存在しない為、処理を中止します</string>
+	<string name="restore_copy_err">リストアファイルのコピー中にエラーが発生しました</string>
+
+	<!-- User I/F Message(AuthCodeRegistration) -->
+	<string name="acrcommentary">ブラウザを使用して取得したGoogleカレンダーの認証コードをテキスト欄に貼り付けて下さい。</string>
+	<string name="acroauthcode">コード：</string>
+	<string name="acroauthcodehint">コードを貼り付けて下さい</string>
+	<string name="acrdisclaimer">\n\n※注意事項\nGoogleカレンダーと同期させることが可能なデータの種類に制限があります。\n繰り返しイベントは、同期対象外です。\n又、終日イベントは、00:00から翌日の00:00のイベントとして同期します。</string>
+</resources>

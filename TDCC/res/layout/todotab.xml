@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ToDoCycleCalendar
+ Copyright (C) 2012  Tohru Mashiko
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+ -->
+<RelativeLayout
+	 xmlns:android="http://schemas.android.com/apk/res/android"
+	 android:orientation="vertical"
+	 android:layout_width="match_parent"
+	 android:layout_height="match_parent"
+	 android:background="@color/tokiiro"
+	 android:id="@+id/todotab"
+>
+	<LinearLayout
+		 android:orientation="horizontal"
+		 android:layout_width="match_parent"
+		 android:layout_height="wrap_content"
+		 android:id="@+id/ll1"
+		 android:gravity="center_horizontal"
+		 android:layout_gravity="left|center_vertical"
+		 android:layout_alignParentTop="true"
+		 android:background="@color/white"
+	 >
+			<TextView
+				 android:id="@+id/status"
+				 android:layout_width="match_parent"
+				 android:layout_height="match_parent"
+				 android:layout_weight="1.5"
+				 android:text="@string/completion"
+				 android:textStyle="bold"
+				 android:textSize="13sp"
+				 android:textColor="@color/konpeki"
+				 android:gravity="center|center_vertical"
+				 android:background="@drawable/border2_bggainsboro"
+			 />
+			<TextView
+				 android:id="@+id/priority"
+				 android:layout_width="match_parent"
+				 android:layout_height="match_parent"
+				 android:layout_weight="1.5"
+				 android:text="@string/priority"
+				 android:textStyle="bold"
+				 android:textSize="13sp"
+				 android:textColor="@color/konpeki"
+				 android:gravity="center|center_vertical"
+				 android:background="@drawable/border2_bggainsboro"
+			 />
+			<TextView
+				 android:id="@+id/timeneeded"
+				 android:layout_width="match_parent"
+				 android:layout_height="match_parent"
+				 android:layout_weight="1.5"
+				 android:text="@string/timeneeded"
+				 android:textStyle="bold"
+				 android:textSize="13sp"
+				 android:textColor="@color/konpeki"
+				 android:gravity="center|center_vertical"
+				 android:background="@drawable/border2_bggainsboro"
+			 />
+			<TextView
+				 android:id="@+id/category"
+				 android:layout_width="match_parent"
+				 android:layout_height="match_parent"
+				 android:layout_weight="1.5"
+				 android:text="@string/category"
+				 android:textStyle="bold"
+				 android:textSize="13sp"
+				 android:textColor="@color/konpeki"
+				 android:gravity="center|center_vertical"
+				 android:background="@drawable/border2_bggainsboro"
+			 />
+			<TextView
+				 android:id="@+id/subcategory"
+				 android:layout_width="match_parent"
+				 android:layout_height="match_parent"
+				 android:layout_weight="1.5"
+				 android:text="@string/subcategory"
+				 android:textStyle="bold"
+				 android:textSize="13sp"
+				 android:textColor="@color/konpeki"
+				 android:gravity="center|center_vertical"
+				 android:background="@drawable/border2_bggainsboro"
+			 />
+			<TextView
+				 android:id="@+id/title"
+				 android:layout_width="match_parent"
+				 android:layout_height="match_parent"
+				 android:layout_weight="1"
+				 android:text="@string/title"
+				 android:textStyle="bold"
+				 android:textSize="13sp"
+				 android:textColor="@color/konpeki"
+				 android:gravity="center|center_vertical"
+				 android:background="@drawable/border2_bggainsboro"
+			 />
+	</LinearLayout>
+	<LinearLayout
+		 android:id="@+id/ll2"
+		 android:orientation="vertical"
+		 android:layout_width="match_parent"
+		 android:layout_height="wrap_content"
+		 android:gravity="center"
+		 android:layout_alignParentBottom="true"
+		 android:background="@color/tokiiro"
+	>
+		<LinearLayout
+			 android:id="@+id/ll3"
+			 android:orientation="horizontal"
+			 android:layout_width="match_parent"
+			 android:layout_height="wrap_content"
+			 android:gravity="center"
+			 android:background="@color/tokiiro"
+		 >
+			<TextView
+				 android:id="@+id/totaltimeneeded"
+				 android:textSize="24sp"
+				 android:textStyle="bold"
+				 android:textColor="@color/konpeki"
+				 android:layout_height="wrap_content"
+				 android:layout_width="wrap_content"
+				 android:layout_gravity="center|center_vertical"
+				 android:singleLine="true">
+			</TextView>
+		</LinearLayout>
+		<LinearLayout
+			 android:id="@+id/ll4"
+			 android:orientation="horizontal"
+			 android:layout_width="match_parent"
+			 android:layout_height="wrap_content"
+			 android:gravity="center"
+			 android:background="@color/tokiiro"
+		 >
+			<Button
+				 android:id="@+id/newaddbutton"
+				 android:layout_width="0dip"
+				 android:layout_weight="1"
+				 android:text="@string/newadd_btn"
+				 android:onClick="newAdd"
+				 android:visibility="visible"
+				 android:layout_height="wrap_content"
+				 android:layout_gravity="center_vertical|center_horizontal"
+			 />
+			<Button
+				 android:id="@+id/carryoverbutton"
+				 android:layout_width="0dip"
+				 android:layout_weight="1"
+				 android:text="@string/carryover_btn"
+				 android:onClick="carryOver"
+				 android:visibility="visible"
+				 android:layout_height="wrap_content"
+				 android:layout_gravity="center_vertical|center_horizontal"
+			 />
+		</LinearLayout>
+	</LinearLayout>
+	<ViewFlipper
+		 android:layout_width="match_parent"
+		 android:layout_height="0dip"
+		 android:layout_above="@id/ll2"
+		 android:layout_below="@id/ll1"
+		 android:id="@+id/vfList" >
+		<ListView
+			 android:id="@+id/todolist"
+			 android:layout_width="match_parent"
+			 android:layout_height="match_parent"
+			 android:fastScrollEnabled="true"
+			 android:scrollingCache="false"
+			 android:focusable="false"
+			 android:focusableInTouchMode="false"
+			 android:background="@color/tokiiro"
+		 />
+	</ViewFlipper>
+</RelativeLayout>

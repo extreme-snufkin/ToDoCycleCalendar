@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ToDoCycleCalendar
+ Copyright (C) 2012  Tohru Mashiko
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+ -->
+<RelativeLayout
+	 xmlns:android="http://schemas.android.com/apk/res/android"
+	 android:orientation="vertical"
+	 android:layout_width="match_parent"
+	 android:layout_height="match_parent"
+	 android:background="@color/mizuiro"
+	 android:id="@+id/search"
+>
+	<LinearLayout
+		 android:orientation="vertical"
+		 android:layout_width="match_parent"
+		 android:layout_height="wrap_content"
+		 android:id="@+id/ll1"
+		 android:gravity="center"
+		 android:layout_alignParentTop="true"
+	 >
+		<LinearLayout
+			 android:id="@+id/ll2"
+			 android:orientation="horizontal"
+			 android:layout_width="match_parent"
+			 android:layout_height="wrap_content"
+			 android:layout_gravity="center_vertical"
+			 android:gravity="center_vertical"
+		 >
+			<TextView
+				 android:id="@+id/tvsearchstring"
+				 android:text="@string/sestring"
+				 android:textSize="14sp"
+				 android:textStyle="bold"
+				 android:textColor="@color/konruri"
+				 android:layout_width="wrap_content"
+				 android:layout_height="wrap_content"
+				 android:layout_gravity="center_vertical"
+				 android:gravity="center_vertical"
+			 />
+			<EditText
+				 android:id="@+id/etsearchstring"
+				 android:hint="@string/sestringhint"
+				 android:inputType="text"
+				 android:textSize="14sp"
+				 android:layout_width="0dip"
+				 android:layout_height="wrap_content"
+				 android:layout_weight="1"
+				 android:singleLine="true"
+				 android:layout_gravity="center_vertical"
+				 android:gravity="center_vertical"
+			 />
+			<ImageView
+				 android:id="@+id/ivmicicon1"
+				 android:src="@drawable/mic_blue"
+				 android:contentDescription="@string/mic_btn"
+				 android:layout_height="wrap_content"
+				 android:layout_width="wrap_content"
+				 android:layout_gravity="center_vertical"
+				 android:visibility="invisible" >
+			</ImageView>
+		</LinearLayout>
+		<LinearLayout
+			 android:id="@+id/ll3"
+			 android:orientation="horizontal"
+			 android:layout_width="match_parent"
+			 android:layout_height="wrap_content"
+		 >
+			<TextView
+				 android:id="@+id/tvsearchtarget"
+				 android:text="@string/setarget"
+				 android:textSize="14sp"
+				 android:textStyle="bold"
+				 android:textColor="@color/konruri"
+				 android:layout_width="wrap_content"
+				 android:layout_height="wrap_content"
+				 android:layout_gravity="center_vertical"
+				 android:gravity="center_vertical" />
+			<Spinner
+				 android:id="@+id/ssearchtarget"
+				 android:layout_height="wrap_content"
+				 android:layout_width="wrap_content"
+				 android:entries="@array/searchtargetspinner"
+				 android:prompt="@string/scalarmhint"
+				 android:layout_gravity="center_vertical"
+				 android:gravity="center_vertical" 
+			 >
+			</Spinner>
+			<Button
+				 android:id="@+id/btscsearch"
+				 android:layout_width="wrap_content"
+				 android:text="@string/search_btn"
+				 android:onClick="scSearch"
+				 android:visibility="visible"
+				 android:layout_height="wrap_content"
+				 android:gravity="center_vertical|center_horizontal"
+			 />
+		</LinearLayout>
+		<LinearLayout
+			 android:id="@+id/ll4"
+			 android:orientation="horizontal"
+			 android:layout_width="match_parent"
+			 android:layout_height="wrap_content"
+			 android:visibility="gone"
+		 >
+			<TextView
+				 android:id="@+id/tvtargetperiod"
+				 android:text="@string/setargetperiod"
+				 android:textSize="14sp"
+				 android:textStyle="bold"
+				 android:textColor="@color/konpeki"
+				 android:layout_width="wrap_content"
+				 android:layout_height="wrap_content"
+				 android:layout_gravity="center_vertical"
+				 android:paddingTop="5dip"
+				 android:paddingBottom="5dip"
+			 />
+			<LinearLayout
+				 android:id="@+id/ll5"
+				 android:orientation="horizontal"
+				 android:layout_width="match_parent"
+				 android:layout_height="wrap_content"
+				 android:layout_margin="5dip"
+				 android:layout_gravity="center_vertical"
+			 >
+				<TextView
+					 android:id="@+id/tvtargetdate"
+					 android:textSize="20sp"
+					 android:textStyle="bold"
+					 android:textColor="@color/konpeki"
+					 android:layout_height="wrap_content"
+					 android:layout_width="wrap_content"
+					 android:paddingTop="10dip"
+					 android:paddingBottom="10dip"
+					 android:gravity="center_vertical"
+					 android:background="@drawable/border_bgtokiiro"
+				 >
+				</TextView>
+				<Button
+					 android:id="@+id/bttdsearch"
+					 android:layout_width="wrap_content"
+					 android:text="@string/search_btn"
+					 android:onClick="tdSearch"
+					 android:layout_height="wrap_content"
+					 android:gravity="center_vertical|center_horizontal"
+				 />
+			</LinearLayout>
+		</LinearLayout>
+		<LinearLayout
+			 android:id="@+id/ll6"
+			 android:orientation="horizontal"
+			 android:layout_width="match_parent"
+			 android:layout_height="40sp"
+			 android:gravity="center_horizontal"
+			 android:layout_gravity="center|center_vertical"
+		 >
+			<TextView
+				 android:id="@+id/searchresulttitle"
+				 android:layout_width="match_parent"
+				 android:layout_height="match_parent"
+				 android:text="@string/seresultlist"
+				 android:textStyle="bold"
+				 android:textSize="12sp"
+				 android:textColor="@color/konpeki"
+				 android:gravity="center|center_vertical"
+				 android:background="@drawable/border2_bggainsboro"
+			 />
+		</LinearLayout>
+	</LinearLayout>
+	<ListView
+		 android:id="@+id/resultlist"
+		 android:layout_width="match_parent"
+		 android:layout_height="wrap_content"
+		 android:layout_below="@id/ll1"
+		 android:fastScrollEnabled="true"
+		 android:scrollingCache="false"
+		 android:focusable="false"
+		 android:focusableInTouchMode="false"
+	/>
+</RelativeLayout>

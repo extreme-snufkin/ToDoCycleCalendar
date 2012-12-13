@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ToDoCycleCalendar
+ Copyright (C) 2012  Tohru Mashiko
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+ -->
+<resources>
+	<!-- アプリケーション設定情報 -->
+	<!-- Calendar -->
+	<string name="onflag">オン</string>
+	<string name="scsearchtarget">スケジュール</string>
+	<string name="tdsearchtarget">ToDo</string>
+	<!-- SQL -->
+	<string name="sqlite_todo_create">"
+CREATE TABLE TODO (TDID INTEGER PRIMARY KEY, DATE INTEGER NOT NULL, TITLE TEXT NOT NULL, PRIORITY_CODE TEXT NOT NULL, TAT TEXT, CATEGORY_CODE TEXT, SUBCATEGORY_CODE TEXT, STATUS INTEGER NOT NULL, DETAIL TEXT);
+CREATE TABLE PRIORITY (CODE TEXT PRIMARY KEY NOT NULL, NAME TEXT NOT NULL);
+CREATE TABLE CATEGORY (CODE TEXT PRIMARY KEY NOT NULL, NAME TEXT NOT NULL UNIQUE);
+CREATE TABLE SUBCATEGORY (PCODE TEXT NOT NULL, CCODE TEXT NOT NULL, NAME TEXT, PRIMARY KEY(PCODE, CCODE));
+INSERT INTO PRIORITY(CODE, NAME) VALUES (\'A\', \'今日中\');
+INSERT INTO PRIORITY(CODE, NAME) VALUES (\'B\', \'今週中\');
+INSERT INTO PRIORITY(CODE, NAME) VALUES (\'C\', \'その他\');
+INSERT INTO CATEGORY(CODE, NAME) VALUES (\'B\', \'ビジネス\');
+INSERT INTO CATEGORY(CODE, NAME) VALUES (\'P\', \'プライベート\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'B\', \'A\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'B\', \'B\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'B\', \'C\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'B\', \'D\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'B\', \'E\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'B\', \'F\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'B\', \'G\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'B\', \'H\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'B\', \'I\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'B\', \'J\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'B\', \'K\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'B\', \'L\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'B\', \'M\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'B\', \'N\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'B\', \'O\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'B\', \'P\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'B\', \'Q\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'B\', \'R\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'B\', \'S\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'B\', \'T\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'P\', \'A\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'P\', \'B\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'P\', \'C\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'P\', \'D\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'P\', \'E\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'P\', \'F\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'P\', \'G\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'P\', \'H\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'P\', \'I\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'P\', \'J\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'P\', \'K\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'P\', \'L\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'P\', \'M\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'P\', \'N\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'P\', \'O\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'P\', \'P\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'P\', \'Q\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'P\', \'R\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'P\', \'S\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'P\', \'T\', \'\');
+"</string>
+</resources>

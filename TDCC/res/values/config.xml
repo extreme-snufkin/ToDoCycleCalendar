@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ToDoCycleCalendar
+ Copyright (C) 2012  Tohru Mashiko
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+ -->
+<resources>
+	<!-- Application configuration -->
+	<!-- User Interface ID -->
+	<string name="uiid1">calendar</string>
+	<string name="uiid2">maintab</string>
+	<string name="uiid3">schedulelist</string>
+	<string name="uiid4">todolist</string>
+	<string name="uiid5">scheduleregistration</string>
+	<string name="uiid6">scheduleedit</string>
+	<string name="uiid7">todoregistration</string>
+	<string name="uiid8">todoedit</string>
+	<string name="uiid9">searchschedule</string>
+	<string name="uiid10">searchtodo</string>
+	<string name="uiid11">synchronism</string>
+	<string name="uiid12">aggregatecalculation</string>
+	<string name="uiid13">subcategoryedit</string>
+	<string name="uiid14">backUprestore</string>
+	<!-- AsyncTask -->
+	<string name="aggregatecalculation_sleep">50</string>
+	<string name="scheduletab_sleep">50</string>
+	<string name="search_sleep">50</string>
+	<!-- Calendar -->
+	<string name="lower_limit_time">2000-01-01</string>
+	<string name="upper_limit_time">2100-12-31</string>
+	<string name="onflag">On</string>
+	<string name="scsearchtarget">Schedule</string>
+	<string name="tdsearchtarget">ToDo</string>
+	<!-- Input String Count -->
+	<string name="isc_limit1">1024</string>
+	<string name="isc_limit2">8192</string>
+	<!-- Output Data Size -->
+	<string name="ods_limit1">524288</string>
+	<!-- ToDo -->
+	<string name="todo_limit_count">30</string>
+	<!-- SQLite file path-->
+	<string name="sqlite_directory_kugiri">/</string>
+	<string name="sqlite_directory_path1">/data/</string>
+	<string name="sqlite_directory_path2">/databases/</string>
+	<string name="sqlite_directory_path3">/TDCC/BACKUP/</string>
+	<!-- SQLite file name -->
+	<string name="sqlite_schedule_filename">schedule.db</string>
+	<string name="sqlite_todo_filename">_todo.db</string>
+	<!-- SQL -->
+	<string name="sqlite_schedule_upgrade">"
+DROP TABLE IF EXISTS SCHEDULE
+DROP TABLE IF EXISTS AUTHINFO
+"</string>
+	<string name="sqlite_todo_upgrade">"
+DROP TABLE IF EXISTS TODO
+DROP TABLE IF EXISTS PRIORITY
+DROP TABLE IF EXISTS CATEGORY
+DROP TABLE IF EXISTS SUBCATEGORY
+"</string>
+	<string name="sqlite_schedule_create">"
+CREATE TABLE SCHEDULE (ID INTEGER PRIMARY KEY, DELETED INTEGER, MODIFIED INTEGER, ALARM INTEGER, ALARM_LIST TEXT, TITLE TEXT, CONTENT TEXT, GD_WHERE TEXT, GD_WHEN_ENDTIME TEXT, GD_WHEN_STARTTIME TEXT, PUBLISHED TEXT, UPDATED TEXT, CATEGORY TEXT, EDIT_URL TEXT, GD_EVENTSTATUS TEXT, CALENDAR_ID TEXT, ETAG TEXT, ENDTIME INTEGER, STARTTIME INTEGER, ALARM_FLAG INTEGER);
+CREATE TABLE AUTHINFO (ACCESS_TOKEN TEXT, ACCESS_TOKEN_EXPIRE INTEGER, REFRESH_TOKEN TEXT, LASTUPDATE TEXT);
+INSERT INTO AUTHINFO(ACCESS_TOKEN, ACCESS_TOKEN_EXPIRE, REFRESH_TOKEN, LASTUPDATE) VALUES ( NULL, 0, NULL, NULL);
+"</string>
+	<string name="sqlite_todo_create">"
+CREATE TABLE TODO (TDID INTEGER PRIMARY KEY, DATE INTEGER NOT NULL, TITLE TEXT NOT NULL, PRIORITY_CODE TEXT NOT NULL, TAT TEXT, CATEGORY_CODE TEXT, SUBCATEGORY_CODE TEXT, STATUS INTEGER NOT NULL, DETAIL TEXT);
+CREATE TABLE PRIORITY (CODE TEXT PRIMARY KEY NOT NULL, NAME TEXT NOT NULL);
+CREATE TABLE CATEGORY (CODE TEXT PRIMARY KEY NOT NULL, NAME TEXT NOT NULL UNIQUE);
+CREATE TABLE SUBCATEGORY (PCODE TEXT NOT NULL, CCODE TEXT NOT NULL, NAME TEXT, PRIMARY KEY(PCODE, CCODE));
+INSERT INTO PRIORITY(CODE, NAME) VALUES (\'A\', \'By the end of today\');
+INSERT INTO PRIORITY(CODE, NAME) VALUES (\'B\', \'By the end of this week\');
+INSERT INTO PRIORITY(CODE, NAME) VALUES (\'C\', \'Other\');
+INSERT INTO CATEGORY(CODE, NAME) VALUES (\'B\', \'Business\');
+INSERT INTO CATEGORY(CODE, NAME) VALUES (\'P\', \'Private\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'B\', \'A\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'B\', \'B\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'B\', \'C\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'B\', \'D\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'B\', \'E\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'B\', \'F\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'B\', \'G\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'B\', \'H\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'B\', \'I\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'B\', \'J\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'B\', \'K\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'B\', \'L\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'B\', \'M\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'B\', \'N\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'B\', \'O\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'B\', \'P\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'B\', \'Q\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'B\', \'R\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'B\', \'S\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'B\', \'T\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'P\', \'A\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'P\', \'B\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'P\', \'C\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'P\', \'D\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'P\', \'E\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'P\', \'F\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'P\', \'G\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'P\', \'H\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'P\', \'I\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'P\', \'J\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'P\', \'K\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'P\', \'L\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'P\', \'M\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'P\', \'N\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'P\', \'O\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'P\', \'P\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'P\', \'Q\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'P\', \'R\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'P\', \'S\', \'\');
+INSERT INTO SUBCATEGORY(PCODE, CCODE, NAME) VALUES (\'P\', \'T\', \'\');
+"</string>
+	<string name="sqlite_schedule_select1">SELECT ID, DELETED, MODIFIED, ALARM, ALARM_LIST, TITLE, CONTENT, GD_WHERE, GD_WHEN_ENDTIME, GD_WHEN_STARTTIME, PUBLISHED, UPDATED, CATEGORY, EDIT_URL, GD_EVENTSTATUS, CALENDAR_ID, ETAG, ENDTIME, STARTTIME, ALARM_FLAG FROM SCHEDULE WHERE DELETED = 0 AND ID = ?;</string>
+	<string name="sqlite_schedule_select2">SELECT ID, DELETED, MODIFIED, ALARM, ALARM_LIST, TITLE, CONTENT, GD_WHERE, GD_WHEN_ENDTIME, GD_WHEN_STARTTIME, PUBLISHED, UPDATED, CATEGORY, EDIT_URL, GD_EVENTSTATUS, CALENDAR_ID, ETAG, ENDTIME, STARTTIME, ALARM_FLAG FROM SCHEDULE WHERE DELETED = 0 AND ((STARTTIME &lt;= ? AND ENDTIME &gt;= ?) OR (STARTTIME &lt; ? AND STARTTIME &gt;= ?) OR (ENDTIME &lt;= ? AND ENDTIME &gt; ? AND STARTTIME &lt;&gt; ?)) ORDER BY STARTTIME;</string>
+	<string name="sqlite_schedule_select3">SELECT ID, DELETED, MODIFIED, ALARM, ALARM_LIST, TITLE, CONTENT, GD_WHERE, GD_WHEN_ENDTIME, GD_WHEN_STARTTIME, PUBLISHED, UPDATED, CATEGORY, EDIT_URL, GD_EVENTSTATUS, CALENDAR_ID, ETAG, ENDTIME, STARTTIME, ALARM_FLAG FROM SCHEDULE WHERE DELETED = 0 AND (STARTTIME &lt;= ? AND ENDTIME &gt;= ?) ORDER BY STARTTIME;</string>
+	<string name="sqlite_schedule_select4" formatted="false">SELECT DISTINCT SUBSTR(GD_WHEN_STARTTIME, 1, 10) AS TARGET_DATE FROM SCHEDULE WHERE TITLE LIKE \'%\' || ? || \'%\' OR CONTENT LIKE \'%\' || ? || \'%\' OR GD_WHERE LIKE \'%\' || ? || \'%\' ORDER BY STARTTIME;</string>
+	<string name="sqlite_schedule_select5">SELECT DELETED, TITLE, UPDATED FROM SCHEDULE WHERE CALENDAR_ID = ?;</string>
+	<string name="sqlite_schedule_select6">SELECT ID, DELETED, MODIFIED, ALARM, ALARM_LIST, TITLE, CONTENT, GD_WHERE, GD_WHEN_ENDTIME, GD_WHEN_STARTTIME, PUBLISHED, UPDATED, CATEGORY, EDIT_URL, GD_EVENTSTATUS, CALENDAR_ID, ETAG, ENDTIME, STARTTIME, ALARM_FLAG FROM SCHEDULE WHERE MODIFIED = 1;</string>
+	<string name="sqlite_schedule_select7">SELECT COUNT(*) AS SCHEDULE_COUNT FROM SCHEDULE WHERE MODIFIED = 1;</string>
+	<string name="sqlite_schedule_insert1">INSERT INTO SCHEDULE(DELETED, MODIFIED, TITLE, CONTENT, GD_WHERE, GD_WHEN_ENDTIME, GD_WHEN_STARTTIME, UPDATED, ENDTIME, STARTTIME, ALARM_FLAG) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);</string>
+	<string name="sqlite_schedule_insert2">INSERT INTO SCHEDULE(DELETED, MODIFIED, ALARM, ALARM_LIST, TITLE, CONTENT, GD_WHERE, GD_WHEN_ENDTIME, GD_WHEN_STARTTIME, PUBLISHED, UPDATED, CATEGORY, EDIT_URL, GD_EVENTSTATUS, CALENDAR_ID, ETAG, ENDTIME, STARTTIME, ALARM_FLAG) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);</string>
+	<string name="sqlite_schedule_update1">UPDATE SCHEDULE SET DELETED = ?, MODIFIED = ?, TITLE = ?, CONTENT = ?, GD_WHERE = ?, GD_WHEN_ENDTIME = ?, GD_WHEN_STARTTIME = ?, UPDATED = ?, ENDTIME = ?, STARTTIME = ?, ALARM_FLAG = ? WHERE ID = ?;</string>
+	<string name="sqlite_schedule_update2">UPDATE SCHEDULE SET DELETED = ?, MODIFIED = ?, UPDATED = ? WHERE ID = ?;</string>
+	<string name="sqlite_schedule_update3">UPDATE SCHEDULE SET DELETED = ?, MODIFIED = ?, ALARM = ?, ALARM_LIST = ?, TITLE = ?, CONTENT = ?, GD_WHERE = ?, GD_WHEN_ENDTIME = ?, GD_WHEN_STARTTIME = ?, PUBLISHED = ?, UPDATED = ?, CATEGORY = ?, EDIT_URL = ?, GD_EVENTSTATUS = ?, ETAG = ?, ENDTIME = ?, STARTTIME = ? WHERE CALENDAR_ID = ?;</string>
+	<string name="sqlite_schedule_update4">UPDATE SCHEDULE SET MODIFIED = ?, UPDATED = ? WHERE CALENDAR_ID = ?;</string>
+	<string name="sqlite_schedule_delete1">DELETE FROM SCHEDULE WHERE CALENDAR_ID = ?;</string>
+	<string name="sqlite_schedule_delete2">DELETE FROM SCHEDULE WHERE ID = ?;</string>
+	<string name="sqlite_authinfo_select1">SELECT ACCESS_TOKEN, ACCESS_TOKEN_EXPIRE, REFRESH_TOKEN, LASTUPDATE FROM AUTHINFO;</string>
+	<string name="sqlite_authinfo_update1">UPDATE AUTHINFO SET ACCESS_TOKEN = ?, ACCESS_TOKEN_EXPIRE = ?, REFRESH_TOKEN = ?;</string>
+	<string name="sqlite_authinfo_update2">UPDATE AUTHINFO SET ACCESS_TOKEN = ?, ACCESS_TOKEN_EXPIRE = ?;</string>
+	<string name="sqlite_authinfo_update3">UPDATE AUTHINFO SET LASTUPDATE = ?;</string>
+	<string name="sqlite_todo_select1">SELECT TDID, DATE, TITLE, PRIORITY_CODE, TAT, CATEGORY_CODE, SUBCATEGORY_CODE, STATUS, DETAIL FROM TODO WHERE DATE = ? ORDER BY PRIORITY_CODE, STATUS, CATEGORY_CODE;</string>
+	<string name="sqlite_todo_select2">SELECT TDID, DATE, TITLE, PRIORITY_CODE, TAT, CATEGORY_CODE, SUBCATEGORY_CODE, STATUS, DETAIL FROM TODO WHERE TDID = ?;</string>
+	<string name="sqlite_todo_select3">SELECT TDID, DATE, TITLE, PRIORITY_CODE, TAT, CATEGORY_CODE, SUBCATEGORY_CODE, STATUS, DETAIL FROM TODO WHERE DATE = ? AND STATUS = 0;</string>
+	<string name="sqlite_todo_select4">SELECT DATE, SUM(TAT) AS STAT FROM TODO WHERE CATEGORY_CODE = ? AND SUBCATEGORY_CODE = ? GROUP BY DATE ORDER BY DATE;</string>
+	<string name="sqlite_todo_select5" formatted="false">SELECT DISTINCT DATE FROM TODO WHERE TITLE LIKE \'%\' || ? || \'%\' OR DETAIL LIKE \'%\' || ? || \'%\' ORDER BY DATE;</string>
+	<string name="sqlite_todo_select6">SELECT DATE, TAT, TITLE FROM TODO WHERE CATEGORY_CODE = ? AND SUBCATEGORY_CODE = ? ORDER BY DATE, PRIORITY_CODE, STATUS;</string>
+	<string name="sqlite_todo_select7">SELECT T.STATUS, T.PRIORITY_CODE, P.NAME AS PRIORITY_NAME, T.TAT, T.CATEGORY_CODE, C.NAME AS CATEGORY_NAME, T.SUBCATEGORY_CODE, S.NAME AS SUBCATEGORY_NAME, T.TITLE, T.DETAIL FROM TODO T LEFT OUTER JOIN PRIORITY P ON (T.PRIORITY_CODE = P.CODE) LEFT OUTER JOIN CATEGORY C ON (T.CATEGORY_CODE = C.CODE) LEFT OUTER JOIN SUBCATEGORY S ON (T.CATEGORY_CODE = S.PCODE AND T.SUBCATEGORY_CODE = S.CCODE) WHERE DATE = ? ORDER BY PRIORITY_CODE, STATUS, CATEGORY_CODE;</string>
+	<string name="sqlite_todo_select8">SELECT TDID FROM TODO WHERE DATE = ?;</string>
+	<string name="sqlite_todo_insert">INSERT INTO TODO(DATE, TITLE, PRIORITY_CODE, TAT, CATEGORY_CODE, SUBCATEGORY_CODE, STATUS, DETAIL) VALUES (?, ?, ?, ?, ?, ?, ?, ?);</string>
+	<string name="sqlite_todo_delete">DELETE FROM TODO WHERE TDID = ?;</string>
+	<string name="sqlite_todo_update">UPDATE TODO SET TITLE = ?, PRIORITY_CODE = ?, TAT = ?, CATEGORY_CODE = ?, SUBCATEGORY_CODE = ?, STATUS = ?, DETAIL = ? WHERE TDID = ?;</string>
+	<string name="sqlite_priority_select1">SELECT CODE, NAME FROM PRIORITY ORDER BY CODE;</string>
+	<string name="sqlite_category_select1">SELECT CODE, NAME FROM CATEGORY ORDER BY CODE;</string>
+	<string name="sqlite_subcategory_select1">SELECT PCODE, CCODE, NAME FROM SUBCATEGORY WHERE PCODE = ? ORDER BY CCODE;</string>
+	<string name="sqlite_subcategory_update1">UPDATE SUBCATEGORY SET NAME = ? WHERE PCODE = ? AND CCODE = ?;</string>
+</resources>

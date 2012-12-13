@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ToDoCycleCalendar
+ Copyright (C) 2012  Tohru Mashiko
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+ -->
+<resources>
+	<color name="lightGray">#c0c0c0</color>
+	<color name="gray">#808080</color>
+	<color name="white">#ffffff</color>
+	<!-- 20120522 Add -->
+	<color name="konruri">#164a84</color>
+	<color name="border_konruri">#FF164a84</color>
+	<color name="kokin">#c9171e</color>
+	<color name="konai">#4a488e</color>
+	<color name="mizuiro">#bce2e8</color>
+	<color name="border_mizuiro">#FFbce2e8</color>
+	<color name="kurocha">#583822</color>
+	<color name="konpeki">#007bbb</color>
+	<color name="tokiiro">#f4b3c2</color>
+	<color name="border_tokiiro">#FFF4b3c2</color>
+	<color name="wasurenagusa">#89c3eb</color>
+	<color name="nanohanairo">#ffec47</color>
+	<color name="tetsukon">#17184b</color>
+	<color name="gainsboro">#dcdcdc</color>
+	<color name="border_white">#FFffffff</color>
+	<color name="kikujin">#6e7955</color>
+	<color name="border_kikujin">#FF6e7955</color>
+</resources>

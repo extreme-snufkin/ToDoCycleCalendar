@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ToDoCycleCalendar
+ Copyright (C) 2012  Tohru Mashiko
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+ -->
+<resources>
+	<!-- Message Setting Infomation -->
+	<!-- Application Name -->
+	<string name="app_name">ToDoCycleCalendar</string>
+
+	<!-- Button Name(Common) -->
+	<string name="yes_btn">Yes</string>
+	<string name="no_btn">No</string>
+	<string name="newadd_btn">Add</string>
+	<string name="alarm_btn">AlarmSetting</string>
+	<string name="carryover_btn">CarryOver</string>
+	<string name="save_btn">Save</string>
+	<string name="cancel_btn">Cancel</string>
+	<string name="search_btn">Search</string>
+	<string name="agcal_btn">Tally</string>
+	<string name="copy_btn">Copy</string>
+	<string name="load_btn">Load</string>
+	<string name="exec_btn">Execution</string>
+	<string name="close_btn">Close</string>
+	<string name="mic_btn">Mic</string>
+
+	<!-- Message(Common) -->
+	<string name="mes1_dialog">Application termination</string>
+	<string name="mes2_dialog">To exit the application.\nAre you sure?</string>
+	<string name="mes3_dialog">Voice Entry</string>
+
+	<!-- Menu Name(Common) -->
+	<string name="search_menu">Search</string>
+	<string name="sync_menu">Synchronism</string>
+	<string name="ac_menu">Aggregate calculation</string>
+	<string name="sc_menu">Subcategory edit</string>
+	<string name="br_menu">Backup / Restore</string>
+	<string name="about_menu">About</string>
+	<string name="end_menu">End</string>
+	<string name="share_menu">Share</string>
+
+	<!-- Internal Error Code(Common) -->
+
+	<!-- Error Code(Common) -->
+	<string name="sqlite_read_err">An error occurred when loading the database</string>
+	<string name="sqlite_write_err">An error occurred during the process of updating the database</string>
+	<string name="storage_status_err">SD card can not be used</string>
+	<string name="storage_disksize_err">There is not enough free space on the SD card</string>
+	<string name="voice_entry_err">An error occurred during the speech input</string>
+	<string name="network_if_err">Because the network is not enabled, the process was stopped</string>
+
+	<!-- User Interface Name(Activity) -->
+	<string name="act_name1">ToDoCycleCalendar</string>
+	<string name="act_name2">Schedule</string>
+	<string name="act_name3">ToDo</string>
+	<string name="act_name4">Schedule registration</string>
+	<string name="act_name5">Schedule edit</string>
+	<string name="act_name6">ToDo registration</string>
+	<string name="act_name7">ToDo edit</string>
+	<string name="act_name8">Search</string>
+	<string name="act_name9">Synchronism</string>
+	<string name="act_name10">Aggregate calculation</string>
+	<string name="act_name11">Subcategory edit</string>
+	<string name="act_name12">Backup / Restore</string>
+	<string name="act_name13">Code registration</string>
+
+	<!-- User I/F Message(Calendar) -->
+	<string name="title_version">Ver.</string>
+	<string name="sunday">Sun</string>
+	<string name="monday">Mon</string>
+	<string name="tuesday">Tue</string>
+	<string name="wednesday">Wed</string>
+	<string name="thursday">Thu</string>
+	<string name="friday">Fri</string>
+	<string name="saturday">Sat</string>
+	<string name="nowOnSync">Now on sync to Google calendar</string>
+	<string name="getToken">While retrieving authentication token</string>
+	<string name="getToken_err">An error occurred when getting the authentication token</string>
+	<string name="gCSync_err">An error occurred during synchronization with Google Calendar</string>
+	<string name="gCSync_Unreflected">Number of data that have not been reflected in sync with Google Calendar:</string>
+	<string name="select_calendar">Date Setting</string>
+	<string name="select_errmsg1">Can not choose the past date than January 1, 2000.</string>
+	<string name="select_errmsg2">Can not choose the future date than December 31, 2100.</string>
+	<string name="about_msg1">About</string>
+	<string name="about_msg2"> ToDoCycleCalendar\n\n Copyright &#169; 2012  Tohru Mashiko \n\n This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. \n\n This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. \n\n You should have received a copy of the GNU General Public License along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</string>
+
+	<!-- User I/F Message(MainTab) -->
+	<string name="maewaku">(</string>
+	<string name="ushirowaku">)</string>
+	<string name="tabshare_msg1">Details of schedule and ToDo</string>
+	<string name="tabshare_msg2">Target date：</string>
+	<string name="tabshare_msg3">\n---------------------------------------------\nSchedule\nTime\tTitle\tWhere\tDescription\n</string>
+	<string name="tabshare_msg4">\n---------------------------------------------\nToDo\nState\tPriority\tTime Needed\tCategory\tSubcategory\tTitle\tContent\n</string>
+	<string name="completion_text1">Completion</string>
+	<string name="completion_text2">Incompletion</string>
+	<string name="share_size_err_msg">Since the shared data size is large, stop the process</string>
+
+	<!-- User I/F Message(ScheduleTab) -->
+	<string name="allday">All day</string>
+	<string name="karakigou">ー</string>
+	<string name="scdeletedialog_title">Schedule Delete</string>
+	<string name="scalarmset_title">Alarm Setting</string>
+	<string name="scalarmset_msg1">Are you sure you want to set the alarm schedule for today?\n※This feature may not function properly on some devices.</string>
+	<string name="scalarmset_msg2">The schedule for the alarm set does not exist</string>
+	<string name="scalarmset_msg3">Setting of the alarm was completed</string>
+	<string name="scalarmset_err">An error occurred when setting the alarm</string>
+	<string name="scload_msg">Now Loading</string>
+
+	<!-- User I/F Message(ToDoTab) -->
+	<string name="completion">Comp\nletion</string>
+	<string name="priority">Prio\nrity</string>
+	<string name="timeneeded">Time\nneeded</string>
+	<string name="category">Cate\ngory</string>
+	<string name="subcategory">Sub\ncate\ngory</string>
+	<string name="title">Title</string>
+	<string name="totaltime1">Total time needed:</string>
+	<string name="totaltime2">H</string>
+	<string name="completion_mark1">✓</string>
+	<string name="completion_mark2">ー</string>
+	<string name="deletedialog_title">ToDo Delete</string>
+	<string name="deletedialog_msg">This target will be deleted.</string>
+	<string name="carryoverdialog_title">ToDo Carry Over</string>
+	<string name="carryoverdialog_msg">Are you sure you want to copy a list of ToDo not completed to the next day?</string>
+	<string name="carryoverstop_msg">Unfinished ToDo does not exist</string>
+	<string name="carryoverstop_msg2">Since the number of ToDo exceeds the upper limit, cannot transcribe</string>
+
+	<!-- User I/F Message(Schedule Registration) -->
+	<string name="sctitle">Title：</string>
+	<string name="scstarttime">Start：</string>
+	<string name="scendtime">End：</string>
+	<string name="scallday">All day：</string>
+	<string name="scplace">Where：</string>
+	<string name="sccontent">Description：</string>
+	<string name="scdamy">　　　　　</string>
+	<string name="scalarm">Alarm\nTarget：</string>
+	<string name="sctitlehint">Please enter a title</string>
+	<string name="scplacehint">Please enter the where</string>
+	<string name="sccontenthint">Please enter the description</string>
+	<string name="scalarmhint">Please choose</string>
+	<string name="sctitle_msg">Please enter a title within 1024 characters.</string>
+	<string name="scalarm_msg">Please select a alarm.</string>
+	<string name="scstartdate_msg">Please choose a start date.</string>
+	<string name="scstarttime_msg">Please choose a start time.</string>
+	<string name="scenddate_msg">Please choose a end date.</string>
+	<string name="scendtime_msg">Please choose a end time.</string>
+	<string name="scstartdate_errmsg">There is a problem with the input format of the start date.</string>
+	<string name="scstarttime_errmsg">There is a problem with the input format of the start time.</string>
+	<string name="scenddate_errmsg">There is a problem with the input format of the end date.</string>
+	<string name="scendtime_errmsg">There is a problem with the input format of the end time.</string>
+	<string name="scdate_errmsg">There are inconsistencies in the start and end time.</string>
+	<string name="scstartdate_errmsg2">To enter a date earlier than 2000 is not allowed. (Start date)</string>
+	<string name="scstartdate_errmsg3">To enter a date later than 2100 is not allowed.(Start date)</string>
+	<string name="scenddate_errmsg2">To enter a date earlier than 2000 is not allowed. (End date)</string>
+	<string name="scenddate_errmsg3">To enter a date later than 2100 is not allowed.(End date)</string>
+	<string name="scplace_msg">Please enter the where within 1024 characters.</string>
+	<string name="sccontent_msg">Please enter the description within 8192 characters.</string>
+
+	<!-- User I/F Message(ToDo Registration) -->
+	<string name="tdpriority">Priority：</string>
+	<string name="tdtimeneeded">Timeneeded：</string>
+	<string name="tdcategory">Category：</string>
+	<string name="tdsubcategory">Subcategory：</string>
+	<string name="tdcompletion">Completion：</string>
+	<string name="tdtitle_msg">Please enter a title.</string>
+	<string name="tdtimeneededhint">Please enter the time required</string>
+	<string name="tdpriority_msg">Please select a priority</string>
+	<string name="tdtimeneeded_msg1">Please enter the required time by the one-byte decimal point and number(Format:00.00)</string>
+	<string name="tdtimeneeded_msg2">Please enter the required time in the range of 0.00 to 24.00</string>
+	<string name="tdcategory_msg">Please select a category</string>
+	<string name="tdsubcategory_msg">Please select a subcategory</string>
+	<string name="tdcontent">Content：</string>
+	<string name="tdcontenthint">Please enter the content</string>
+	<string name="tdcontent_msg">Please enter the content within 8192 characters.</string>
+	<string name="tdlimitcount_msg">Since the number of ToDo exceeds the upper limit, cannot registered.</string>
+
+	<!-- User I/F Message(Search) -->
+	<string name="sestring">Search\nString：</string>
+	<string name="setarget">Targeted\nInformation：</string>
+	<string name="setargetperiod">Target\nPeriod：</string>
+	<string name="seresultlist">Search result list</string>
+	<string name="sestringhint">Please enter a search string</string>
+	<string name="sestring_msg">Please enter a search string.</string>
+	<string name="setargetperiod_msg">Please choose a target period.</string>
+	<string name="setargetperiod_errmsg1">There is a problem with the input format of the target period.</string>
+	<string name="searchprocess">During the search</string>
+
+	<!-- User I/F Message(Aggregate Calculation) -->
+	<string name="acsubcategory">Subcategory name</string>
+	<string name="actotaltime">Total time</string>
+	<string name="actopspace">　　</string>
+	<string name="acbindmark">：</string>
+	<string name="actimemark">H</string>
+	<string name="actallyingprocess">During the tallying</string>
+	<string name="acdelimiter">\t</string>
+	<string name="acshare_msg1">　Category：</string>
+	<string name="acshare_msg2">\n---------------------------------------------\n</string>
+	<string name="acshare_msg3">---------------------------------------------\n</string>
+	<string name="acshare_msg4">Tally of necessary time by subcategory</string>
+
+	<!-- User I/F Message(Subcategory Edit) -->
+	<string name="sceCode">Subcategor\ncode</string>
+	<string name="sceName">Subcategory\nname</string>
+	<string name="sceDialogTitle">Subcategory code：</string>
+	<string name="sceDialogHint">Please enter a subcategory name</string>
+	<string name="sceName_msg">Please enter a subcategory name within 1024 characters.</string>
+	<string name="copydialog_title">Copy subcategories</string>
+	<string name="copydialog_msg">Are you sure you want to overwrite copy data of previous month to the data of month specified?</string>
+
+	<!-- User I/F Message(Backup/Restore) -->
+	<string name="backuptitle">Backup</string>
+	<string name="backuphint">Please enter a backup name</string>
+	<string name="backupclarification">\n　Back up to external storage on the ToDo data and schedule data.\nBecause the backed up data not doing encryption, please keep in mind.\n　Backup destination:\n&lt;External Storage&gt;/TDCC/BACKUP</string>
+	<string name="restoretitle">Restore</string>
+	<string name="restoreConfirm1">\n</string>
+	<string name="restoreConfirm2">Initialize data to the schedule and ToDo, for to restore the backup data of </string>
+	<string name="restoreConfirm3">？</string>
+	<string name="restoreclarification">\n　Restore from existing data.\nBecause current data is initialized at the time of the restore, if necessary, please perform a backup in advance.</string>
+	<string name="backup_msg1">Please enter a backup name.</string>
+	<string name="backup_msg2">Please enter a backup name by the one-byte alphabet and numbers.</string>
+	<string name="backup_msg3">Please enter a backup name within 20 characters.</string>
+	<string name="backup_msg4">Files to be backed up does not exist</string>
+	<string name="backup_msg5">The backup was completed successfully</string>
+	<string name="backup_msg6">During the backup</string>
+	<string name="backup_exist_err">Because the backup file of the same name already existed, canceled processing</string>
+	<string name="backup_copy_err">An error occurred while copying the backup file</string>
+	<string name="restore_msg1">Files to be restored does not exist</string>
+	<string name="restore_msg2">An error occurred while deleting the ToDo data and schedule data</string>
+	<string name="restore_msg3">There is not enough free space on the Internal Storage</string>
+	<string name="restore_msg4">The restore was completed successfully</string>
+	<string name="restore_msg5">During a restore</string>
+	<string name="restore_exist_err">Because a restore file does not exist, canceled processing</string>
+	<string name="restore_copy_err">An error occurred during the copy of the restore file</string>
+
+	<!-- User I/F Message(AuthCodeRegistration) -->
+	<string name="acrcommentary">Please paste the copied code from web page.</string>
+	<string name="acroauthcode">Code：</string>
+	<string name="acroauthcodehint">Please paste the code</string>
+	<string name="acrdisclaimer">\n\n※Notes\nThere are restrictions on the type of data that can be synchronized with Google calendar.\nRepeat events are excluded from synchronization.\nAlso, All-day events are synchronized as data from 00:00 to 00:00 the next day.</string>
+</resources>

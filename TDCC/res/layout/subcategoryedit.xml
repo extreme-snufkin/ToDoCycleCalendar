@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ToDoCycleCalendar
+ Copyright (C) 2012  Tohru Mashiko
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+ -->
+<RelativeLayout
+	 xmlns:android="http://schemas.android.com/apk/res/android"
+	 android:orientation="vertical"
+	 android:layout_width="match_parent"
+	 android:layout_height="match_parent"
+	 android:background="@color/tokiiro"
+	 android:id="@+id/subcategoryedit"
+>
+	<LinearLayout
+		 android:orientation="vertical"
+		 android:layout_width="match_parent"
+		 android:layout_height="wrap_content"
+		 android:id="@+id/ll1"
+		 android:gravity="center"
+		 android:layout_alignParentTop="true"
+		 android:background="@color/tokiiro"
+	 >
+		<LinearLayout
+			 android:orientation="horizontal"
+			 android:layout_width="match_parent"
+			 android:layout_height="wrap_content"
+		 >
+			<TextView
+				 android:id="@+id/tvtargetperiod"
+				 android:text="@string/setargetperiod"
+				 android:textSize="14sp"
+				 android:textStyle="bold"
+				 android:textColor="@color/konpeki"
+				 android:layout_width="wrap_content"
+				 android:layout_height="wrap_content"
+				 android:layout_gravity="center_vertical"
+				 android:paddingTop="5dip"
+				 android:paddingBottom="5dip"
+			 />
+			<LinearLayout
+				 android:orientation="horizontal"
+				 android:layout_width="match_parent"
+				 android:layout_height="wrap_content"
+				 android:layout_margin="5dip"
+			 >
+				<TextView
+					 android:id="@+id/tvtargetyearmonth"
+					 android:textSize="20sp"
+					 android:textStyle="bold"
+					 android:textColor="@color/konpeki"
+					 android:layout_height="wrap_content"
+					 android:layout_width="wrap_content"
+					 android:paddingTop="10dip"
+					 android:paddingBottom="10dip"
+					 android:background="@drawable/border_bgtokiiro"
+				 >
+				</TextView>
+			</LinearLayout>
+		</LinearLayout>
+		<LinearLayout
+			 android:orientation="horizontal"
+			 android:layout_width="match_parent"
+			 android:layout_height="wrap_content"
+		 >
+			<TextView
+				 android:id="@+id/tvcategory"
+				 android:text="@string/tdcategory"
+				 android:textSize="14sp"
+				 android:textStyle="bold"
+				 android:textColor="@color/konpeki"
+				 android:layout_width="wrap_content"
+				 android:layout_height="wrap_content"
+				 android:layout_gravity="center_vertical"
+				 android:gravity="center_vertical" />
+			<Spinner
+				 android:id="@+id/scategory"
+				 android:layout_height="wrap_content"
+				 android:layout_width="wrap_content"
+				 android:prompt="@string/scalarmhint"
+				 android:layout_gravity="center_vertical"
+				 android:gravity="center_vertical" 
+			 >
+			</Spinner>
+			<Button
+				 android:id="@+id/btcopy"
+				 android:layout_width="wrap_content"
+				 android:text="@string/copy_btn"
+				 android:onClick="sctCopy"
+				 android:visibility="visible"
+				 android:layout_height="wrap_content"
+				 android:gravity="center_vertical|center_horizontal"
+			 />
+		</LinearLayout>
+		<LinearLayout
+			 android:orientation="horizontal"
+			 android:layout_width="match_parent"
+			 android:layout_height="wrap_content"
+			 android:gravity="center_horizontal"
+			 android:layout_gravity="left|center_vertical"
+		 >
+			<TextView
+				 android:id="@+id/subcategorycodetitle"
+				 android:layout_width="match_parent"
+				 android:layout_height="40sp"
+				 android:layout_weight="3"
+				 android:text="@string/sceCode"
+				 android:textStyle="bold"
+				 android:textSize="12sp"
+				 android:textColor="@color/konpeki"
+				 android:gravity="center_vertical"
+				 android:background="@drawable/border2_bggainsboro"
+			 />
+			<TextView
+				 android:id="@+id/subcategorynametitle"
+				 android:layout_width="match_parent"
+				 android:layout_height="match_parent"
+				 android:layout_weight="1"
+				 android:text="@string/sceName"
+				 android:textStyle="bold"
+				 android:textSize="12sp"
+				 android:textColor="@color/konpeki"
+				 android:gravity="center_vertical"
+				 android:background="@drawable/border2_bggainsboro"
+			 />
+		</LinearLayout>
+	</LinearLayout>
+	<ListView
+		 android:id="@+id/subcategorylist"
+		 android:layout_width="match_parent"
+		 android:layout_height="wrap_content"
+		 android:layout_below="@id/ll1"
+		 android:fastScrollEnabled="true"
+		 android:scrollingCache="false"
+		 android:focusable="false"
+		 android:focusableInTouchMode="false"
+		 android:background="@color/tokiiro"
+	 />
+</RelativeLayout>

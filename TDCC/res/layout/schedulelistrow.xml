@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ToDoCycleCalendar
+ Copyright (C) 2012  Tohru Mashiko
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+ -->
+<LinearLayout
+	 xmlns:android="http://schemas.android.com/apk/res/android"
+	 android:id="@+id/rowll1"
+	 android:orientation="horizontal"
+	 android:gravity="center_vertical"
+	 android:layout_width="match_parent"
+	 android:layout_height="match_parent"
+	 android:baselineAligned="false"
+>
+	<LinearLayout
+		 android:id="@+id/rowll2"
+		 android:layout_width="match_parent"
+		 android:layout_height="wrap_content"
+		 android:layout_weight="3"
+		 android:orientation="vertical"
+		 android:gravity="center_horizontal"
+		 android:layout_gravity="center|center_vertical"
+		 android:background="@drawable/border2_bgkonruri"
+	>
+		<TextView
+			 android:id="@+id/starttime"
+			 android:layout_width="match_parent"
+			 android:layout_height="wrap_content"
+			 android:textSize="18sp"
+			 android:textStyle="bold"
+			 android:gravity="center|center_vertical"
+			 android:textColor="@color/white"
+			 android:singleLine="true" />
+		<TextView
+			 android:id="@+id/allday"
+			 android:layout_width="match_parent"
+			 android:layout_height="wrap_content"
+			 android:textSize="18sp"
+			 android:textStyle="bold"
+			 android:gravity="center|center_vertical"
+			 android:textColor="@color/white"
+			 android:singleLine="true" />
+		<TextView
+			 android:id="@+id/endtime"
+			 android:layout_width="match_parent"
+			 android:layout_height="wrap_content"
+			 android:textSize="18sp"
+			 android:textStyle="bold"
+			 android:gravity="center|center_vertical"
+			 android:textColor="@color/white"
+			 android:singleLine="true" />
+	</LinearLayout>
+	<LinearLayout
+		 android:id="@+id/rowll3"
+		 android:layout_width="match_parent"
+		 android:layout_height="wrap_content"
+		 android:layout_weight="1"
+		 android:orientation="vertical"
+		 android:gravity="center_horizontal"
+		 android:layout_gravity="center|center_vertical"
+	>
+		<TextView
+			 android:id="@+id/scheduletitle"
+			 android:layout_width="match_parent"
+			 android:layout_height="wrap_content"
+			 android:textStyle="bold"
+			 android:textSize="15sp"
+			 android:textColor="@color/tetsukon"
+			 android:background="@drawable/border2_bgmizuiro"
+			 android:singleLine="true" />
+		<TextView
+			 android:id="@+id/schedulewhere"
+			 android:layout_width="match_parent"
+			 android:layout_height="wrap_content"
+			 android:textStyle="bold"
+			 android:textSize="15sp"
+			 android:textColor="@color/konruri"
+			 android:background="@drawable/border2_bgmizuiro"
+			 android:singleLine="true" />
+		<TextView
+			 android:id="@+id/schedulecontent"
+			 android:layout_width="match_parent"
+			 android:layout_height="wrap_content"
+			 android:textStyle="bold"
+			 android:textSize="15sp"
+			 android:textColor="@color/konpeki"
+			 android:background="@drawable/border2_bgmizuiro"
+			 android:singleLine="true" />
+		<TextView
+			 android:id="@+id/schedulestarttimevalue"
+			 android:layout_width="wrap_content"
+			 android:layout_height="wrap_content"
+			 android:visibility="gone"
+		 />
+		<TextView
+			 android:id="@+id/schedulealarmflag"
+			 android:layout_width="wrap_content"
+			 android:layout_height="wrap_content"
+			 android:visibility="gone"
+		 />
+		<TextView
+			 android:id="@+id/scheduleid"
+			 android:layout_width="wrap_content"
+			 android:layout_height="wrap_content"
+			 android:visibility="gone"
+		 />
+		<TextView
+			 android:id="@+id/calendarid"
+			 android:layout_width="wrap_content"
+			 android:layout_height="wrap_content"
+			 android:visibility="gone"
+		 />
+	</LinearLayout>
+</LinearLayout>
